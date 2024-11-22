@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { i18n, type Locale } from "../../i18n-config";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,13 +19,20 @@ export const metadata: Metadata = {
   description: "My own multiple links platform for Instagram bio.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }));
+}
+
+export default async function RootLayout(props: {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ lang: Locale }>;
+}) {
+  
+  const params = await props.params;
+  const { children } = props;
+
   return (
-    <html lang="en">
+    <html lang={params.lang}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
