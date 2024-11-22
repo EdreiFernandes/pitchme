@@ -1,4 +1,8 @@
+import { useTranslations } from "next-intl";
+
 export default function Home() {
+  const t = useTranslations('index');
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
@@ -66,7 +70,7 @@ export default function Home() {
               </a>
             </li>
           </ul>
-          {/* <div>
+          <div>
             <a
               href="#"
               className="inline-flex items-center text-xs font-normal text-gray-500 hover:underline dark:text-gray-400"
@@ -86,9 +90,9 @@ export default function Home() {
                   d="M7.529 7.988a2.502 2.502 0 0 1 5 .191A2.441 2.441 0 0 1 10 10.582V12m-.01 3.008H10M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                 />
               </svg>
-              Será que vou usar isso?
+              {t('title')}
             </a>
-          </div> */}
+          </div>
         </div>
       </main>
     </div>
