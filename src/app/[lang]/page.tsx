@@ -1,5 +1,6 @@
 import { getDictionary } from "@/get-dictionary";
 import { Locale } from "../../i18n-config";
+import ProfileIcon from "./components/profile-icon";
 
 export default async function Home(props: {params: Promise<{lang: Locale}>;}) {
   const {lang} = await props.params;
@@ -10,7 +11,7 @@ export default async function Home(props: {params: Promise<{lang: Locale}>;}) {
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700">
           <h5 className="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white">
-            Pitch.Me
+            <ProfileIcon></ProfileIcon>
           </h5>
           <p className="text-sm font-normal text-gray-500 dark:text-gray-400">
             #dev por profissão e nas horas vagas.
@@ -92,7 +93,7 @@ export default async function Home(props: {params: Promise<{lang: Locale}>;}) {
                   d="M7.529 7.988a2.502 2.502 0 0 1 5 .191A2.441 2.441 0 0 1 10 10.582V12m-.01 3.008H10M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                 />
               </svg>
-              {dictionary.home.info}
+              Pitch.Me : {dictionary.home.info}
             </a>
           </div>
         </div>
