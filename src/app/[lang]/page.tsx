@@ -11,9 +11,9 @@ export default async function Home(props: {
   return (
     <div>
       <div id="content" className="grid grid-flow-col grid-rows-8 gap-4">
-        <div id="switcherLaguange" className="row-span-1 col-span-2 bg-blue-500">
-          <div className="items-center justify-items-end mr-8 mt-2">
-            01 - switcher
+        <div id="switcherLaguange" className="row-span-1 col-span-2">
+          <div className="items-center justify-items-end mr-6 mt-3">
+            <LocaleSwitcher />
           </div>
         </div>
 
