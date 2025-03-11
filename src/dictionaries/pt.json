@@ -2,5 +2,32 @@
   "home": {
     "message": "Dev por profissão e nas horas vagas.",
     "copyright": "Orgulhosamente criado por Edrei"
+  },
+
+  "version": {
+    "label": "Versão Atual",
+    "current": {
+      "code": "1.1.0",
+      "updates": ["Criando página com detalhes da versão!"]
+    },
+    "history": [
+      {
+        "code": "1.0.0",
+        "updates": [
+          "Novo Layout! Utilizando a tela inteira.",
+          "Seletor de linguagens.",
+          "Correção das mensagens de aviso."
+        ]
+      },
+      {
+        "code": "0.3.0",
+        "updates": ["Página index de redirecionamento para a linguagem padrão."]
+      },
+      { "code": "0.2.0", "updates": ["Adicionando suporte a traduções."] },
+      {
+        "code": "0.1.0",
+        "updates": ["Criando primeira versão da página de links."]
+      }
+    ]
   }
 }

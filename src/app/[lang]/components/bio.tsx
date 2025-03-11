@@ -1,8 +1,10 @@
 "use client";
 
-export default function Bio(props: {
-  message: string;
-}) {
+type Props = {
+  message: string,
+}
+
+export default function Bio(props: Props) {
 
   return (
     <div className="items-center justify-items-center">

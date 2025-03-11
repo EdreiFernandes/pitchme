@@ -2,5 +2,32 @@
   "home": {
     "message": "Dev by profession and in my spare time.",
     "copyright": "Proudly created by Edrei"
+  },
+
+  "version": {
+    "label": "Current Version",
+    "current": {
+      "code": "1.1.0",
+      "updates": ["Creating fix-version page!"]
+    },
+    "history": [
+      {
+        "code": "1.0.0",
+        "updates": [
+          "New Layout! Using the entire screen.",
+          "Language selector",
+          "Fixed warning messages."
+        ]
+      },
+      {
+        "code": "0.3.0",
+        "updates": ["Index page redirecting to the default language."]
+      },
+      { "code": "0.2.0", "updates": ["Adding translation support."] },
+      {
+        "code": "0.1.0",
+        "updates": ["Creating first version of links page."]
+      }
+    ]
   }
 }
