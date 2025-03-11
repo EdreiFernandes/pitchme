@@ -36,8 +36,8 @@ export default async function Home(props: Props) {
         </div>
       </main>
 
-      <footer className="h-10">
-        <MoreAbout message={dictionary.home.copyright} />
+      <footer className="h-15">
+        <MoreAbout message={dictionary.home.copyright} version={dictionary.version.current.code}/>
       </footer>
     </div>
   );
