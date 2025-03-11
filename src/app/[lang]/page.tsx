@@ -6,9 +6,11 @@ import MyLinks from "./components/my-links";
 import MoreAbout from "./components/more-about";
 import Bio from "./components/bio";
 
-export default async function Home(props: {
-  params: Promise<{ lang: Locale }>;
-}) {
+type Props = {
+  params: Promise<{ lang: Locale }>
+}
+
+export default async function Home(props: Props) {
   const { lang } = await props.params;
   const dictionary = await getDictionary(lang);
 

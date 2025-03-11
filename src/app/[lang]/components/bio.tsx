@@ -1,6 +1,6 @@
 "use client";
 
-export default async function Bio(props: {
+export default function Bio(props: {
   message: string;
 }) {
 
