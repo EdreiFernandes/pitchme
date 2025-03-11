@@ -3,6 +3,8 @@ import { Locale } from "../../i18n-config";
 import LocaleSwitcher from "./components/locale-switcher";
 import ProfileIcon from "./components/profile-icon";
 import MyLinks from "./components/my-links";
+import MoreAbout from "./components/more-about";
+import Bio from "./components/bio";
 
 export default async function Home(props: {
   params: Promise<{ lang: Locale }>;
@@ -11,30 +13,30 @@ export default async function Home(props: {
   const dictionary = await getDictionary(lang);
 
   return (
-    <div className="mt-6">
-      <div id="content" className="grid grid-flow-col grid-rows-10 gap-6">
-        <div id="header" className="row-span-2 col-span-2">
-          <div className="col-span-2 grid grid-cols-subgrid gap-1">
-            <div className="items-center justify-items-end">
-              <LocaleSwitcher />
-            </div>
-            <div className="items-center justify-items-center">
-              <ProfileIcon />
-            </div>
+    <div className="flex flex-col h-screen justify-between">
+      <header className="h-10">
+        <LocaleSwitcher />
+      </header>
+      
+      <main className="mb-auto h-10 ">
+        <div id="content" className="grid grid-flow-col grid-rows-10 gap-5">
+          <div id="header" className="row-span-2 col-span-2">
+            <ProfileIcon />
+          </div>
+
+          <div id="bio" className="row-span-1 col-span-2">
+            <Bio message={dictionary.home.message}/>
+          </div>
+
+          <div id="links" className="row-span-6 col-span-2">
+            <MyLinks />
           </div>
         </div>
+      </main>
 
-        <div id="bio" className="row-span-1 col-span-2">
-          <div className="items-center justify-items-center">
-            <b id="name">Edrei Fernandes</b>
-            <p id="message">{dictionary.home.message}</p>
-          </div>
-        </div>
-
-        <div id="links" className="row-span-6 col-span-2">
-          <MyLinks/>
-        </div>
-      </div>
+      <footer className="h-10">
+        <MoreAbout message={dictionary.home.copyright} />
+      </footer>
     </div>
   );
 }
