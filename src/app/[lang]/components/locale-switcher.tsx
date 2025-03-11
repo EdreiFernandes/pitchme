@@ -29,7 +29,7 @@ export default function LocaleSwitcher() {
   };
 
   return (
-    <div>
+    <div id="localeSwitcher" className="mr-2">
       <button
         id="languageSelectorButton"
         onClick={showSelector}
