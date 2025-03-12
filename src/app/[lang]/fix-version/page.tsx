@@ -3,6 +3,7 @@ import { Locale } from "@/i18n-config";
 import LocaleSwitcher from "../components/locale-switcher";
 import MoreAbout from "../components/more-about";
 import { getLinks } from "@/get-links";
+import Link from "next/link";
 
 type Props = {
   params: Promise<{ lang: Locale }>;
@@ -18,7 +19,7 @@ export default async function FixVersion(props: Props) {
       <header className="h-10">
         <div className="grid grid-flow-col grid-rows-1 gap-5">
           <div className="row-span-1 col-span-1">
-            <a
+            <Link
               href={links.home}
               className="font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ml-2 mt-1"
             >
@@ -26,7 +27,7 @@ export default async function FixVersion(props: Props) {
                 <path d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z" />
               </svg>
               <span className="sr-only">Icon description</span>
-            </a>
+            </Link>
           </div>
           <div className="row-span-1 col-span-1">
             <LocaleSwitcher />
