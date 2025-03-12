@@ -7,7 +7,7 @@
   "version": {
     "label": "Versão Atual",
     "current": {
-      "code": "1.1.0",
+      "code": "1.1.1",
       "updates": ["Criando página com detalhes da versão!"]
     },
     "history": [
