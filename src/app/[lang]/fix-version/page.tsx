@@ -50,7 +50,7 @@ export default async function FixVersion(props: Props) {
               <div className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 text-center font-semibold">
                 {dictionary.version.current.updates.map((update) => {
                   return (
-                    <ul className="space-y-4 text-left text-gray-500 dark:text-gray-400">
+                    <ul key={update} className="space-y-4 text-left text-gray-500 dark:text-gray-400">
                       <li className="flex items-center space-x-3 rtl:space-x-reverse">
                         <svg
                           className="shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400"
@@ -81,14 +81,14 @@ export default async function FixVersion(props: Props) {
               <dl className="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700 mx-5">
                 {dictionary.version.history.map((oldVersion) => {
                   return (
-                    <div className="flex flex-col py-3">
+                    <div key={oldVersion.code} className="flex flex-col py-3">
                       <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
                         {oldVersion.code}
                       </dt>
                       <dd className="text-lg font-semibold">
                         {oldVersion.updates.map((update) => {
                           return (
-                            <ul className="space-y-4 text-left text-gray-500 dark:text-gray-400">
+                            <ul key={update} className="space-y-4 text-left text-gray-500 dark:text-gray-400">
                               <li className="flex items-center space-x-3 rtl:space-x-reverse">
                                 <svg
                                   className="shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400"
