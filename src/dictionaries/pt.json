@@ -7,10 +7,14 @@
   "version": {
     "label": "Versão Atual",
     "current": {
-      "code": "1.1.1",
-      "updates": ["Criando página com detalhes da versão!"]
+      "code": "1.1.2",
+      "updates": ["Corrigindo problemas de navegação."]
     },
     "history": [
+      {
+        "code": "1.1.1",
+        "updates": ["Criando página com detalhes da versão!"]
+      },
       {
         "code": "1.0.0",
         "updates": [

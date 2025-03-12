@@ -6,6 +6,7 @@ import BrazilFlag from "./icons/brazil-flag";
 import UnitedStatesFlag from "./icons/united-states-flag";
 import { useState } from "react";
 import SpainFlag from "./icons/spain-flag";
+import Link from "next/link";
 
 export default function LocaleSwitcher() {
   const [showLanguageSelector, setShowLanguageSelector] = useState(false);
@@ -19,8 +20,8 @@ export default function LocaleSwitcher() {
   };
 
   const renderFlag = (language: string) => {
-    if (language == "en") return <UnitedStatesFlag />;
-    if (language == "es") return <SpainFlag />;
+    if (language.includes("en")) return <UnitedStatesFlag />;
+    if (language.includes("es")) return <SpainFlag />;
 
     return <BrazilFlag />;
   };
@@ -67,12 +68,12 @@ export default function LocaleSwitcher() {
               {i18n.locales.map((locale) => {
                 return (
                   <li key={locale}>
-                    <a
+                    <Link
                       href={redirectedPathname(locale)}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       {renderFlag(locale)}
-                    </a>
+                    </Link>
                   </li>
                 );
               })}

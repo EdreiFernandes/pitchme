@@ -1,4 +1,5 @@
 import { getLinks } from "@/get-links";
+import Link from "next/link";
 
 type Props = {
   message: string,
@@ -23,7 +24,7 @@ export default async function MoreAbout(props: Props) {
       <div id="version" className="row-span-1 col-span-1">
         <div className="items-end justify-items-end">
           <div className="mr-2">
-            <a
+            <Link
               href={links.fixVersion}
               className="inline-flex items-center text-xs font-normal text-gray-500 hover:underline dark:text-gray-400"
             >
@@ -43,7 +44,7 @@ export default async function MoreAbout(props: Props) {
                 />
               </svg>
               {props.version}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
