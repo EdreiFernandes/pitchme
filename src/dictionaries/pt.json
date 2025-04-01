@@ -7,10 +7,18 @@
   "version": {
     "label": "Versão Atual",
     "current": {
-      "code": "1.1.2",
-      "updates": ["Corrigindo problemas de navegação."]
+      "code": "1.1.3",
+      "updates": [
+        "Corrigindo navegação para a página de fix-details",
+        "Corrigindo carregamento da imagem de perfil",
+        "Tornando a site mais carinhoso :)"
+      ]
     },
     "history": [
+      {
+        "code": "1.1.2",
+        "updates": ["Corrigindo problemas de navegação."]
+      },
       {
         "code": "1.1.1",
         "updates": ["Criando página com detalhes da versão!"]
