@@ -6,7 +6,7 @@ export default async function MyLinks() {
   return (
     <div>
       <ul className="my-4 space-y-3 mx-5">
-        <li>
+        <li id="musiquinhas-link">
           <a
             href={links.musiquinhas}
             className="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
@@ -20,12 +20,9 @@ export default async function MyLinks() {
               <path d="M1.327,12.4,4.887,15,3.535,19.187A3.178,3.178,0,0,0,4.719,22.8a3.177,3.177,0,0,0,3.8-.019L12,20.219l3.482,2.559a3.227,3.227,0,0,0,4.983-3.591L19.113,15l3.56-2.6a3.227,3.227,0,0,0-1.9-5.832H16.4L15.073,2.432a3.227,3.227,0,0,0-6.146,0L7.6,6.568H3.231a3.227,3.227,0,0,0-1.9,5.832Z" />
             </svg>
             <span className="flex-1 ms-3 whitespace-nowrap">Musiquinhas</span>
-            {/* <span className="inline-flex items-center justify-center px-2 py-0.5 ms-3 text-xs font-medium text-gray-500 bg-gray-200 rounded dark:bg-gray-700 dark:text-gray-400">
-                  Nous
-                </span> */}
           </a>
         </li>
-        <li>
+        <li id="github-link">
           <a
             href={links.github}
             className="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
@@ -41,7 +38,7 @@ export default async function MyLinks() {
             <span className="flex-1 ms-3 whitespace-nowrap">GitHub</span>
           </a>
         </li>
-        <li>
+        <li id="nous-link">
           <a
             href={links.nous}
             className="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
@@ -55,6 +52,30 @@ export default async function MyLinks() {
               <path d="m22.554.923a3.978 3.978 0 0 0 -3.291-.853l-9.184 1.722a5 5 0 0 0 -4.079 4.914v9.85a3.959 3.959 0 0 0 -2-.556 4 4 0 1 0 4 4v-9.124a2 2 0 0 1 1.632-1.966l11.183-2.1a1 1 0 0 1 1.185.99v5.76a3.959 3.959 0 0 0 -2-.56 4 4 0 1 0 4 4v-13a3.987 3.987 0 0 0 -1.446-3.077z" />
             </svg>
             <span className="flex-1 ms-3 whitespace-nowrap">Nous</span>
+          </a>
+        </li>
+        <li id="partyhub-link">
+          <a
+            href={links.partyhub}
+            className="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+          >
+            <svg
+              id="partyhub-icon"
+              viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5"
+            >
+              <g fill="none" fill-rule="evenodd">
+                <path d="m0 0h32v32h-32z" />
+
+                <path
+                  d="m14.5 0c3.8659932 0 7 3.13400675 7 7 0 3.5261219-2.6071882 6.4433024-5.9989899 6.9289666l-.0010101 12.0710334h13v6h-28v-6h13l-.0000082-12.07089c-3.3922902-.4852332-5.9999918-3.4026409-5.9999918-6.92911 0-3.86599325 3.1340068-7 7-7z"
+                  fill="#000000ff"
+                  transform="translate(1.5)"
+                />
+              </g>
+            </svg>
+            <span className="flex-1 ms-3 whitespace-nowrap">Party Hub</span>
           </a>
         </li>
       </ul>
