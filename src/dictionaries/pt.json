@@ -7,14 +7,18 @@
   "version": {
     "label": "Versão Atual",
     "current": {
-      "code": "1.1.3",
-      "updates": [
-        "Corrigindo navegação para a página de fix-details",
-        "Corrigindo carregamento da imagem de perfil",
-        "Tornando a site mais carinhoso :)"
-      ]
+      "code": "1.2.0",
+      "updates": ["Adicionando link para um novo projeto - Party Hub"]
     },
     "history": [
+      {
+        "code": "1.1.3",
+        "updates": [
+          "Corrigindo navegação para a página de fix-details",
+          "Corrigindo carregamento da imagem de perfil",
+          "Tornando a site mais carinhoso :)"
+        ]
+      },
       {
         "code": "1.1.2",
         "updates": ["Corrigindo problemas de navegação."]
